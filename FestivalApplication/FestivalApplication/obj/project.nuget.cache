@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qdtYtXc7pw1/nbdX9g9gEx5wrdjbhTUSIieozINY9KFL6UJQapPs7Vw2EfG8aBGdJ8+g9yWeCZOvmIZMAdGpSQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\ProjectAlles\\project\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jitse\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.29\\microsoft.netcore.app.host.win-x64.3.1.29.nupkg.sha512"
+  ],
+  "logs": []
+}
