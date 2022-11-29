@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\ProjectAlles\\project\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj": {}
+    "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\project\\ProjectWebapplicaties\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\ProjectAlles\\project\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj": {
+    "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\project\\ProjectWebapplicaties\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\ProjectAlles\\project\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj",
+        "projectUniqueName": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\project\\ProjectWebapplicaties\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj",
         "projectName": "FestivalApplication",
-        "projectPath": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\ProjectAlles\\project\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj",
+        "projectPath": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\project\\ProjectWebapplicaties\\FestivalApplication\\FestivalApplication\\FestivalApplication.csproj",
         "packagesPath": "C:\\Users\\jitse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\ProjectAlles\\project\\FestivalApplication\\FestivalApplication\\obj\\",
+        "outputPath": "C:\\Users\\jitse\\Desktop\\thomas more\\jaar2\\webapplicaties\\project\\ProjectWebapplicaties\\FestivalApplication\\FestivalApplication\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\jitse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
