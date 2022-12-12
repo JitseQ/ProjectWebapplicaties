@@ -3,35 +3,77 @@
 }
 
 <div class="text-center">
+    <!--FAQ-->
     <div class="card" style="width:500px; float:right; padding:10px; margin:10px;">
         <img class="card-img-top" src="" alt="Card image">
         <div class="card-img-overlay">
             <h4 class="card-title"> <a asp-controller="FAQ" asp-action="Index" class="btn">FAQ</a></h4>
         </div>
     </div>
+
+    <!--Store-->
     <div class="card" style="width:500px; float:left; padding:10px; margin:10px;">
         <img class="card-img-top" src="" alt="Card image">
         <div class="card-img-overlay">
             <h4 class="card-title"> <a asp-controller ="Store" asp-action="Index" class="btn">Store</a></h4>
         </div>
     </div>
+
+    <!--Line-up-->
     <div class="card" style="width:500px; float:right; padding:10px; margin:10px;">
         <img class="card-img-top" src="" alt="Card image">
         <div class="card-img-overlay">
             <h4 class="card-title"> <a asp-controller="LineUp" asp-action="Index" class="btn">Line-up</a></h4>
         </div>
     </div>
+
+    <!--Account-->
     <div class="card" style="width:500px; float:left; padding:10px; margin:10px;">
         <img class="card-img-top" src="" alt="Card image">
         <div class="card-img-overlay">
             <h4 class="card-title"> <a asp-controller="Account" asp-action="Index" class="btn">Account</a></h4>
         </div>
     </div>
+
+    <!--Explore-->
     <div class="card" style="width:500px; display:inline-block; padding:10px; margin:10px;">
         <img class="card-img-top" src="" alt="Card image">
         <div class="card-img-overlay">
             <h4 class="card-title"> <a asp-controller="Explore" asp-action="Index" class="btn">Explore</a></h4>
         </div>
+    </div>
+
+
+    <!--Plaats tussen cards en news-->
+    <br/>
+    <hr/>
+    <br/>
+
+
+    <!--News-->
+    <h2 class="News">News</h2>
+
+    <!--Carousel-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="..." alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="..." alt="Third slide">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
 
