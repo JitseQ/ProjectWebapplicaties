@@ -40,3 +40,5 @@ C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplic
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Explore\Index.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Store\Index.cshtml.g.cs
+C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Store\Merchandise.cshtml.g.cs
+C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Store\Tickets.cshtml.g.cs

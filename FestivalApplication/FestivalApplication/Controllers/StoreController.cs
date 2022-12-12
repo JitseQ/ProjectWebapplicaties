@@ -8,5 +8,15 @@ namespace FestivalApplication.Controllers
         {
             return View();
         }
+
+        public IActionResult Tickets()
+        {
+            return View();
+        }
+
+        public IActionResult Merchandise()
+        {
+            return View();
+        }
     }
 }

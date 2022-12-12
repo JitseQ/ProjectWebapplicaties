@@ -24,8 +24,23 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark"  asp-controller="FAQ" asp-action="Index">FAQ</a>
                         </li>
+                        <!--
                         <li class="nav-item">
                             <a class="nav-link text-dark"  asp-controller="Store" asp-action="Index">Store</a>
+                        </li>
+                        -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Store" asp-action="Tickets">Tickets</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Store
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Store" asp-action="Tickets">Tickets</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" asp-controller="Store" asp-action="Merchandise">Merchandise</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="LineUp" asp-action="Index">Line-up</a>
