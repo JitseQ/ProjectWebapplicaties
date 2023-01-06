@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 
@@ -10,35 +11,37 @@ namespace FestivalApplication.Models
         [Key]
         public int GebruikerId { get; set; }
 
-        [NotNull]
+        [Required]
         public string Naam { get; set; }
 
-        [NotNull]
+        [Required]
         public string Voornaam { get; set; }
 
-        [NotNull]
+        [Required]
         public string Gebruikersnaam { get; set; }
 
-        [NotNull]
+        [Required]
         public DateTime Geboortedatum { get; set; }
 
-        [NotNull]
+        [Required]
         public string Email { get; set; }
 
-        [NotNull]
+        [Required]
         public int Telefoonnummer { get; set; }
 
-        [NotNull]
+        [Required]
         public int Huisnummer { get; set; }
 
-        [NotNull]
+        [Required]
         public int Postcode { get; set; }
 
-        [NotNull]
+        [Required]
         public string Dorp { get; set; }
 
-        [NotNull]
+        [Required]
         public Boolean IsAdmin { get; set; }
 
+
+        public ICollection<Factuur> Facturen { get; set; }
     }
 }

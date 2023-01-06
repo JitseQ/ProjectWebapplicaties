@@ -10,11 +10,17 @@ namespace FestivalApplication.Models
         [Key]
         public int FactuurId { get; set; }
 
-        [NotNull]
-        public ICollection<Gebruiker> GebruikerId { get; set; }
+        [Required]
+        public int GebruikerId { get; set; }
 
-        [NotNull]
+        [Required]
         public DateTime Datum { get; set; }
+
+       
+        // Relatie connectiviteit tegengestelde pool
+        public Gebruiker Gebruiker { get; set; }
+
+        public ICollection<FactuurProduct> FactuurProducten { get; set; }
 
     }
 }

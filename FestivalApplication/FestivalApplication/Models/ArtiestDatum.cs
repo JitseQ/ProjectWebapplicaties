@@ -11,19 +11,23 @@ namespace FestivalApplication.Models
         [Key]
         public int ArtiestDatumId { get; set; }
 
-        [NotNull]
-        public ICollection<Artiest> ArtiestId { get; set; }
+        [Required]
+        public int ArtiestId { get; set; }
 
-        [NotNull]
-        public ICollection<Stage> StageId { get; set; }
+        [Required]
+        public int StageId { get; set; }
 
-        [NotNull]
+        [Required]
         public DateTime Datum { get; set; }
 
-        [NotNull]
+        [Required]
         public string Beginuur { get; set; }
 
-        [NotNull]
+        [Required]
         public string Einduur { get; set; }
+
+
+        public Artiest Artiest { get; set; }
+        public Stage Stage { get; set; }
     }
 }

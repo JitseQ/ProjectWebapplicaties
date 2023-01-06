@@ -9,11 +9,14 @@ namespace FestivalApplication.Models
         [Key]
         public int ArtiestGenreId { get; set; }
 
-        [NotNull]
-        public ICollection<Artiest> ArtiestId { get; set; }
+        [Required]
+        public int ArtiestId { get; set; }
 
-        [NotNull]
-        public ICollection<Genre> GenreId { get; set; }
+        [Required]
+        public int GenreId { get; set; }
 
+
+        public Genre Genre { get; set; }
+        public Artiest Artiest { get; set; }
     }
 }

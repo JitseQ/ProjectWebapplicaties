@@ -10,7 +10,7 @@ namespace FestivalApplication.Models
         [Key]
         public int ArtiestId { get; set; }
 
-        [NotNull]
+        [Required]
         public string Naam { get; set; }
 
         public string Beschrijving { get; set; }
@@ -18,5 +18,10 @@ namespace FestivalApplication.Models
         public string Instagram { get; set; }
         public string Facebook { get; set; }
         public string Spotify { get; set; }
+
+
+        public ICollection<Product> Producten { get; set; }
+        public ICollection<ArtiestGenre> ArtiestGenres { get; set; }
+        public ICollection<ArtiestDatum> ArtiestDatums { get; set; }
     }
 }

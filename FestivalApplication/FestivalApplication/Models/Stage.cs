@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 
 namespace FestivalApplication.Models
@@ -8,8 +9,8 @@ namespace FestivalApplication.Models
         [Key]
         public int StageId { get; set; }
 
-        [NotNull]
+        [Required]
         public string Naam { get; set; }
-
+        public ICollection<ArtiestDatum> ArtiestDatums { get; set; }
     }
 }

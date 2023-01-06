@@ -9,15 +9,20 @@ namespace FestivalApplication.Models
         [Key]
         public int ProductId { get; set; }
 
-        [NotNull]
+        [Required]
         public string Naam { get; set; }
 
-        [NotNull]
+        [Required]
         public int Prijs { get; set; }
        
-        [NotNull]
+        [Required]
         public string Beschrijving { get; set; }
 
-        public ICollection<Artiest> ArtiestId { get; set; }
+        public int ArtiestId { get; set; }
+        
+        // Relatie connectiviteit tegengestelde pool
+        public Artiest Artiest { get; set; }
+
+        public ICollection<FactuurProduct> FactuurProducten { get; set; }
     }
 }
