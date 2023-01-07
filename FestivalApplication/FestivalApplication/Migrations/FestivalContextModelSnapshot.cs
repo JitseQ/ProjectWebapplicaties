@@ -26,12 +26,6 @@ namespace FestivalApplication.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ArtiestDatumId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("ArtiestGenreId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Beschrijving")
                         .HasColumnType("nvarchar(max)");
 
@@ -45,19 +39,10 @@ namespace FestivalApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("ProductId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Spotify")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ArtiestId");
-
-                    b.HasIndex("ArtiestDatumId");
-
-                    b.HasIndex("ArtiestGenreId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("Artiest");
                 });
@@ -68,6 +53,9 @@ namespace FestivalApplication.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ArtiestId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Beginuur")
                         .IsRequired()
@@ -80,7 +68,12 @@ namespace FestivalApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StageId")
+                        .HasColumnType("int");
+
                     b.HasKey("ArtiestDatumId");
+
+                    b.HasIndex("ArtiestId");
 
                     b.ToTable("ArtiestDatum");
                 });
@@ -92,7 +85,17 @@ namespace FestivalApplication.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("ArtiestId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("GenreId")
+                        .HasColumnType("int");
+
                     b.HasKey("ArtiestGenreId");
+
+                    b.HasIndex("ArtiestId");
+
+                    b.HasIndex("GenreId");
 
                     b.ToTable("ArtiestGenre");
                 });
@@ -107,12 +110,12 @@ namespace FestivalApplication.Migrations
                     b.Property<DateTime>("Datum")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("FactuurProductId")
+                    b.Property<int>("GebruikerId")
                         .HasColumnType("int");
 
                     b.HasKey("FactuurId");
 
-                    b.HasIndex("FactuurProductId");
+                    b.HasIndex("GebruikerId");
 
                     b.ToTable("Factuur");
                 });
@@ -127,7 +130,17 @@ namespace FestivalApplication.Migrations
                     b.Property<int>("Aantal")
                         .HasColumnType("int");
 
+                    b.Property<int>("FactuurId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
                     b.HasKey("FactuurProductId");
+
+                    b.HasIndex("FactuurId");
+
+                    b.HasIndex("ProductId");
 
                     b.ToTable("FactuurProduct");
                 });
@@ -146,9 +159,6 @@ namespace FestivalApplication.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("FactuurId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("Geboortedatum")
                         .HasColumnType("datetime2");
@@ -170,6 +180,10 @@ namespace FestivalApplication.Migrations
                     b.Property<int>("Postcode")
                         .HasColumnType("int");
 
+                    b.Property<string>("Straatnaam")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("Telefoonnummer")
                         .HasColumnType("int");
 
@@ -178,8 +192,6 @@ namespace FestivalApplication.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("GebruikerId");
-
-                    b.HasIndex("FactuurId");
 
                     b.ToTable("Gebruiker");
                 });
@@ -191,16 +203,11 @@ namespace FestivalApplication.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ArtiestGenreId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Naam")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("GenreId");
-
-                    b.HasIndex("ArtiestGenreId");
 
                     b.ToTable("Genre");
                 });
@@ -212,12 +219,12 @@ namespace FestivalApplication.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("ArtiestId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Beschrijving")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("FactuurProductId")
-                        .HasColumnType("int");
 
                     b.Property<string>("Naam")
                         .IsRequired()
@@ -228,7 +235,7 @@ namespace FestivalApplication.Migrations
 
                     b.HasKey("ProductId");
 
-                    b.HasIndex("FactuurProductId");
+                    b.HasIndex("ArtiestId");
 
                     b.ToTable("Product");
                 });
@@ -240,68 +247,76 @@ namespace FestivalApplication.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ArtiestDatumId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Naam")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("StageId");
 
-                    b.HasIndex("ArtiestDatumId");
-
                     b.ToTable("Stage");
                 });
 
-            modelBuilder.Entity("FestivalApplication.Models.Artiest", b =>
+            modelBuilder.Entity("FestivalApplication.Models.ArtiestDatum", b =>
                 {
-                    b.HasOne("FestivalApplication.Models.ArtiestDatum", null)
-                        .WithMany("ArtiestId")
-                        .HasForeignKey("ArtiestDatumId");
+                    b.HasOne("FestivalApplication.Models.Artiest", "Artiest")
+                        .WithMany("ArtiestDatums")
+                        .HasForeignKey("ArtiestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("FestivalApplication.Models.ArtiestGenre", null)
-                        .WithMany("ArtiestId")
-                        .HasForeignKey("ArtiestGenreId");
+                    b.HasOne("FestivalApplication.Models.Stage", "Stage")
+                        .WithMany("ArtiestDatums")
+                        .HasForeignKey("ArtiestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
 
-                    b.HasOne("FestivalApplication.Models.Product", null)
-                        .WithMany("ArtiestId")
-                        .HasForeignKey("ProductId");
+            modelBuilder.Entity("FestivalApplication.Models.ArtiestGenre", b =>
+                {
+                    b.HasOne("FestivalApplication.Models.Artiest", "Artiest")
+                        .WithMany("ArtiestGenres")
+                        .HasForeignKey("ArtiestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FestivalApplication.Models.Genre", "Genre")
+                        .WithMany("ArtiestGenres")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("FestivalApplication.Models.Factuur", b =>
                 {
-                    b.HasOne("FestivalApplication.Models.FactuurProduct", null)
-                        .WithMany("FactuurId")
-                        .HasForeignKey("FactuurProductId");
+                    b.HasOne("FestivalApplication.Models.Gebruiker", "Gebruiker")
+                        .WithMany("Facturen")
+                        .HasForeignKey("GebruikerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("FestivalApplication.Models.Gebruiker", b =>
+            modelBuilder.Entity("FestivalApplication.Models.FactuurProduct", b =>
                 {
-                    b.HasOne("FestivalApplication.Models.Factuur", null)
-                        .WithMany("GebruikerId")
-                        .HasForeignKey("FactuurId");
-                });
+                    b.HasOne("FestivalApplication.Models.Factuur", "Factuur")
+                        .WithMany("FactuurProducten")
+                        .HasForeignKey("FactuurId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-            modelBuilder.Entity("FestivalApplication.Models.Genre", b =>
-                {
-                    b.HasOne("FestivalApplication.Models.ArtiestGenre", null)
-                        .WithMany("GenreId")
-                        .HasForeignKey("ArtiestGenreId");
+                    b.HasOne("FestivalApplication.Models.Product", "Product")
+                        .WithMany("FactuurProducten")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("FestivalApplication.Models.Product", b =>
                 {
-                    b.HasOne("FestivalApplication.Models.FactuurProduct", null)
-                        .WithMany("ProductId")
-                        .HasForeignKey("FactuurProductId");
-                });
-
-            modelBuilder.Entity("FestivalApplication.Models.Stage", b =>
-                {
-                    b.HasOne("FestivalApplication.Models.ArtiestDatum", null)
-                        .WithMany("StageId")
-                        .HasForeignKey("ArtiestDatumId");
+                    b.HasOne("FestivalApplication.Models.Artiest", "Artiest")
+                        .WithMany("Producten")
+                        .HasForeignKey("ArtiestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

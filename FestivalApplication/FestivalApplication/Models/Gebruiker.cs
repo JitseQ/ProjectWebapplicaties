@@ -30,6 +30,9 @@ namespace FestivalApplication.Models
         public int Telefoonnummer { get; set; }
 
         [Required]
+        public string Straatnaam { get; set; }
+
+        [Required]
         public int Huisnummer { get; set; }
 
         [Required]

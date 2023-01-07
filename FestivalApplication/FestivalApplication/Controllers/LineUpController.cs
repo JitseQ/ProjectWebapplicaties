@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FestivalApplication.Data;
+using Microsoft.AspNetCore.Mvc;
+using FestivalApplication.ViewModels;
+using System.Linq;
 
 namespace FestivalApplication.Controllers
 {
@@ -6,7 +9,17 @@ namespace FestivalApplication.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            LineUpListViewModel viewModel = new LineUpListViewModel();
+            viewModel.ArtiestDatums = _context.ArtiestDatums.ToList();
+            //viewModel.Artiesten = _context.Artiesten.ToList();
+            return View(viewModel);
+        }
+
+        private readonly FestivalContext _context;
+
+        public LineUpController(FestivalContext context)
+        {
+            _context = context;
         }
     }
 }
