@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FestivalApplication.Migrations
 {
     [DbContext(typeof(FestivalContext))]
-    [Migration("20230107194454_initialCreate")]
+    [Migration("20230108140238_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -76,6 +76,8 @@ namespace FestivalApplication.Migrations
                     b.HasKey("ArtiestDatumId");
 
                     b.HasIndex("ArtiestId");
+
+                    b.HasIndex("StageId");
 
                     b.ToTable("ArtiestDatum");
                 });
@@ -186,8 +188,9 @@ namespace FestivalApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Telefoonnummer")
-                        .HasColumnType("int");
+                    b.Property<string>("Telefoonnummer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Voornaam")
                         .IsRequired()
@@ -268,7 +271,7 @@ namespace FestivalApplication.Migrations
 
                     b.HasOne("FestivalApplication.Models.Stage", "Stage")
                         .WithMany("ArtiestDatums")
-                        .HasForeignKey("ArtiestId")
+                        .HasForeignKey("StageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -27,7 +27,7 @@ namespace FestivalApplication.Models
         public string Email { get; set; }
 
         [Required]
-        public int Telefoonnummer { get; set; }
+        public string Telefoonnummer { get; set; }
 
         [Required]
         public string Straatnaam { get; set; }

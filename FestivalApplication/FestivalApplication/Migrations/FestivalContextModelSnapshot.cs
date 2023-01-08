@@ -75,6 +75,8 @@ namespace FestivalApplication.Migrations
 
                     b.HasIndex("ArtiestId");
 
+                    b.HasIndex("StageId");
+
                     b.ToTable("ArtiestDatum");
                 });
 
@@ -184,8 +186,9 @@ namespace FestivalApplication.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Telefoonnummer")
-                        .HasColumnType("int");
+                    b.Property<string>("Telefoonnummer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Voornaam")
                         .IsRequired()
@@ -266,7 +269,7 @@ namespace FestivalApplication.Migrations
 
                     b.HasOne("FestivalApplication.Models.Stage", "Stage")
                         .WithMany("ArtiestDatums")
-                        .HasForeignKey("ArtiestId")
+                        .HasForeignKey("StageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

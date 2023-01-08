@@ -50,11 +50,11 @@ namespace FestivalApplication.Data
                 .ToTable("Stage");
 
 
-            modelBuilder.Entity<Product>()
+           /* modelBuilder.Entity<Product>()
              .HasOne(p => p.Artiest)   
              .WithMany(x => x.Producten)
-             .HasForeignKey(p => p.ArtiestId) 
-             .IsRequired();
+             .HasForeignKey(p => p.ArtiestId);
+           */
 
             modelBuilder.Entity<FactuurProduct>()
              .HasOne(p => p.Product)
@@ -71,8 +71,7 @@ namespace FestivalApplication.Data
             modelBuilder.Entity<Factuur>()
               .HasOne(p => p.Gebruiker)
              .WithMany(x => x.Facturen)
-             .HasForeignKey(p => p.GebruikerId)
-             .IsRequired();
+             .HasForeignKey(p => p.GebruikerId);
 
             modelBuilder.Entity<ArtiestGenre>()
               .HasOne(p => p.Artiest)
@@ -93,9 +92,9 @@ namespace FestivalApplication.Data
              .IsRequired();
 
             modelBuilder.Entity<ArtiestDatum>()
-             .HasOne(p => p.Stage)
+            .HasOne(p => p.Stage)
             .WithMany(x => x.ArtiestDatums)
-            .HasForeignKey(p => p.ArtiestId)
+            .HasForeignKey(p => p.StageId)
             .IsRequired();
 
         }

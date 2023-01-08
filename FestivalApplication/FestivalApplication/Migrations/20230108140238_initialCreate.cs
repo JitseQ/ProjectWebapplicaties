@@ -35,7 +35,7 @@ namespace FestivalApplication.Migrations
                     Gebruikersnaam = table.Column<string>(nullable: false),
                     Geboortedatum = table.Column<DateTime>(nullable: false),
                     Email = table.Column<string>(nullable: false),
-                    Telefoonnummer = table.Column<int>(nullable: false),
+                    Telefoonnummer = table.Column<string>(nullable: false),
                     Straatnaam = table.Column<string>(nullable: false),
                     Huisnummer = table.Column<int>(nullable: false),
                     Postcode = table.Column<int>(nullable: false),
@@ -163,8 +163,8 @@ namespace FestivalApplication.Migrations
                         principalColumn: "ArtiestId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ArtiestDatum_Stage_ArtiestId",
-                        column: x => x.ArtiestId,
+                        name: "FK_ArtiestDatum_Stage_StageId",
+                        column: x => x.StageId,
                         principalTable: "Stage",
                         principalColumn: "StageId",
                         onDelete: ReferentialAction.Cascade);
@@ -201,6 +201,11 @@ namespace FestivalApplication.Migrations
                 name: "IX_ArtiestDatum_ArtiestId",
                 table: "ArtiestDatum",
                 column: "ArtiestId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ArtiestDatum_StageId",
+                table: "ArtiestDatum",
+                column: "StageId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ArtiestGenre_ArtiestId",
