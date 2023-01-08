@@ -19,6 +19,8 @@ namespace FestivalApplication.Models
         public string Facebook { get; set; }
         public string Spotify { get; set; }
 
+        public string Afbeelding { get; set; }
+
 
         public ICollection<Product> Producten { get; set; }
         public ICollection<ArtiestGenre> ArtiestGenres { get; set; }

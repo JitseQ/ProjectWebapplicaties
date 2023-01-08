@@ -86,7 +86,7 @@ namespace FestivalApplication.Data
            .IsRequired();
 
             modelBuilder.Entity<ArtiestDatum>()
-              .HasOne(p => p.Artiest)
+              .HasOne<Artiest>(p => p.Artiest)
              .WithMany(x => x.ArtiestDatums)
              .HasForeignKey(p => p.ArtiestId)
              .IsRequired();

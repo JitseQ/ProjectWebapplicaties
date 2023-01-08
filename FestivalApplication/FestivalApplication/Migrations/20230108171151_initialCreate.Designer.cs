@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FestivalApplication.Migrations
 {
     [DbContext(typeof(FestivalContext))]
-    [Migration("20230108140238_initialCreate")]
+    [Migration("20230108171151_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

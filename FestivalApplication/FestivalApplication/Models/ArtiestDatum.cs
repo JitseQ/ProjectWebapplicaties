@@ -27,7 +27,7 @@ namespace FestivalApplication.Models
         public string Einduur { get; set; }
 
 
-        public Artiest Artiest { get; set; }
+        public virtual Artiest Artiest { get; set; }
         public Stage Stage { get; set; }
     }
 }

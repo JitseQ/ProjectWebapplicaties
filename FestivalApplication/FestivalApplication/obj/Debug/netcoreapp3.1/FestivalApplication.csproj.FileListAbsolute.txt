@@ -62,3 +62,5 @@ C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplic
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Details.cshtml.g.cs
+C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
