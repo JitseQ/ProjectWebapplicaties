@@ -36,8 +36,9 @@ namespace FestivalApplication.Controllers
         public IActionResult Merchandise()
         {
             MerchandiseListViewModel viewModel = new MerchandiseListViewModel();
-            viewModel.Producten = _context.Producten.Where(p => p.Naam.Contains("shirt")).Where(p => p.Naam.Contains("trui")).ToList();
-            return View();
+            viewModel.Producten = _context.Producten.Where(p => p.Naam.Contains("trui")).ToList();
+            viewModel.Producten = _context.Producten.Where(p => p.Naam.Contains("shirt")).ToList();
+            return View(viewModel);
         }
     }
 }

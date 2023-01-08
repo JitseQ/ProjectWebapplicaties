@@ -7,10 +7,12 @@
     <h1 class="display-4">@ViewData["Title"]</h1>
      @foreach (var item in Model.Producten)
 	{
+		
 		<div class="card" style="width:500px; margin-top:100px; float:left; margin: 20px; margin-bottom: 20px">
-			
+			<img class="card-img-top" src="~/tshirt.jpg" alt="Card image">
 			<div class="card-img-overlay">
-				<h4 class="card-title-center"><a asp-action="Details" asp-route-id="@item.ProductId"> @item.Naam </a></h4>
+				<h4 class="card-title-center"> @item.Naam </h4>
+				<p>@item.Beschrijving</p>
 			</div>
 		</div>
 	}
