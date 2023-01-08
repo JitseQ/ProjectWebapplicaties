@@ -1,4 +1,7 @@
-﻿@page
-@model FestivalApplication.Areas.Identity.Account.Manage._ManageNavModel
+﻿@inject SignInManager<CustomUser> SignInManager
+@using FestivalApplication.Areas.Identity.Data;
 @{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
+<ul class="nav nav-pills flex-column">
+</ul>
