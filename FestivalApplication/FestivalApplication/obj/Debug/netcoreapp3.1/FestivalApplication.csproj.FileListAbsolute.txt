@@ -36,7 +36,6 @@ C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplic
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\FestivalApplication.csproj.CopyComplete
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\FAQ\Index.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Index.cshtml.g.cs
-C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Explore\Index.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Store\Index.cshtml.g.cs
@@ -64,3 +63,4 @@ C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplic
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\LineUp\Details.cshtml.g.cs
 C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\jitse\Desktop\thomas more\jaar2\webapplicaties\project\ProjectWebapplicaties\FestivalApplication\FestivalApplication\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Account\Manage\Index.cshtml.g.cs

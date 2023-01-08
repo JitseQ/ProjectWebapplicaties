@@ -6,23 +6,25 @@
 @model FestivalApplication.ViewModels.LineUpDetailsViewModel
 
 
-<div class="text-center">
+<div class="text-center" >
 
     @foreach (var item in Model.Artiesten)
     {
-        <h1 ><img class="card-img-top" src="~/Festivalimage.jpg" alt="Card image"> @item.Naam </h1>
+        <img class="card-img-top" src="~/Festivalimage.jpg" alt="Card image" style="height:400px; width:auto">
+        <h1> @item.Naam </h1>
     }
 
 
 <p>
-    Beginuur: @Model.Beginuur
+    Datum: @Model.Datum | 
+    Beginuur: @Model.Beginuur | 
+    Einduur: @Model.Einduur 
 </p>
-<p>
-    einduur: @Model.Einduur
-</p>
-<p>
-    Datum: @Model.Datum
-</p>
+
+ @foreach (var item in Model.Stages)
+    {
+        <p>  Stage: @item.Naam </p>
+    }
 
     @foreach (var item in Model.Artiesten)
     {

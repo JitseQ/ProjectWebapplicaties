@@ -23,8 +23,9 @@ namespace FestivalApplication.Controllers
 
         public IActionResult Details(int? id)
         {
-            ArtiestDatum ad = _context.ArtiestDatums.Include(y => y.Artiest).Where(x => x.ArtiestId == id).FirstOrDefault();
+            ArtiestDatum ad = _context.ArtiestDatums.Include(y => y.Artiest).Include(z => z.Stage).Where(x => x.ArtiestId == id).FirstOrDefault();
             List<Artiest> artiesten = _context.Artiesten.Where(x => x.ArtiestId == id).ToList();
+            List<Stage> stages = _context.Stages.Where(x => x.StageId == id).ToList();
             if (ad != null)
             {
                 LineUpDetailsViewModel viewModel = new LineUpDetailsViewModel()
@@ -34,7 +35,8 @@ namespace FestivalApplication.Controllers
                     Einduur = ad.Einduur,
                     Datum = ad.Datum,
                     StageId = ad.StageId,
-                    Artiesten = artiesten
+                    Artiesten = artiesten,
+                    Stages = stages
                 };
                 return View(viewModel);
             }

@@ -23,6 +23,7 @@ namespace FestivalApplication.ViewModels
         public string Einduur { get; set; }
 
         public List<Artiest> Artiesten { get; internal set; }
+        public List<Stage> Stages { get; internal set; }
 
     }
 }

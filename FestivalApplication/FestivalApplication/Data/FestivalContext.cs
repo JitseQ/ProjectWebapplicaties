@@ -57,30 +57,30 @@ namespace FestivalApplication.Data
            */
 
             modelBuilder.Entity<FactuurProduct>()
-             .HasOne(p => p.Product)
+             .HasOne<Product>(p => p.Product)
              .WithMany(x => x.FactuurProducten)
              .HasForeignKey(p => p.ProductId)
              .IsRequired();
 
             modelBuilder.Entity<FactuurProduct>()
-            .HasOne(p => p.Factuur)
+            .HasOne<Factuur>(p => p.Factuur)
             .WithMany(x => x.FactuurProducten)
             .HasForeignKey(p => p.FactuurId)
             .IsRequired();
 
             modelBuilder.Entity<Factuur>()
-              .HasOne(p => p.Gebruiker)
+              .HasOne<Gebruiker>(p => p.Gebruiker)
              .WithMany(x => x.Facturen)
              .HasForeignKey(p => p.GebruikerId);
 
             modelBuilder.Entity<ArtiestGenre>()
-              .HasOne(p => p.Artiest)
+              .HasOne<Artiest>(p => p.Artiest)
              .WithMany(x => x.ArtiestGenres)
              .HasForeignKey(p => p.ArtiestId)
              .IsRequired();
 
             modelBuilder.Entity<ArtiestGenre>()
-            .HasOne(p => p.Genre)
+            .HasOne<Genre>(p => p.Genre)
            .WithMany(x => x.ArtiestGenres)
            .HasForeignKey(p => p.GenreId)
            .IsRequired();
@@ -92,7 +92,7 @@ namespace FestivalApplication.Data
              .IsRequired();
 
             modelBuilder.Entity<ArtiestDatum>()
-            .HasOne(p => p.Stage)
+            .HasOne<Stage>(p => p.Stage)
             .WithMany(x => x.ArtiestDatums)
             .HasForeignKey(p => p.StageId)
             .IsRequired();
